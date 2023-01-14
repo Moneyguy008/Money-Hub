@@ -7,14 +7,13 @@ local Tab = Window:NewTab("FPS Cheats")
 local Section = Tab:NewSection("Cheats")
 
 
-Section:NewTextBox("password", "TextboxInfo", function(txt)
-	if txt == "givemedahack" then
-		Section:NewButton("AimBot", "ButtonInfo", function()
+
+Section:NewButton("AimBot", "ButtonInfo", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
 
-		end)
+end)
 
-		Section:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+Section:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 		end)
 
@@ -249,5 +248,4 @@ Section:NewTextBox("password", "TextboxInfo", function(txt)
 			end
 			coroutine.wrap(TKVUMP_fake_script)()
 		end)
-	end
-end)
+
