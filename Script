@@ -249,9 +249,5 @@ Section:NewTextBox("password", "TextboxInfo", function(txt)
 			end
 			coroutine.wrap(TKVUMP_fake_script)()
 		end)
-	if txt ~= givemedahack then
-	    
-		game.Players.LocalPlayer:Kick("you pp")
-		end
 	end
 end)
