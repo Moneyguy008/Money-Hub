@@ -6,7 +6,7 @@ local studs = Window:NewTab("Easy Stud Jumps Obby")
 
 local Section1 = studs:NewSection("Cheats")
 
-local gtag = Window:NewTab("Easy Stud Jumps Obby")
+local gtag = Window:NewTab("Gorrila Tag Professional")
 
 local Section2 = studs:NewSection("Cheats")
 
