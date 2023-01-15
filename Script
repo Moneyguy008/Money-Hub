@@ -6,7 +6,7 @@ local studs = Window:NewTab("Easy Stud Jumps Obby")
 
 local Section1 = studs:NewSection("Cheats")
 
-local gtag = Window:NewTab("Gorrila Tag Professional")
+local gtag = Window:NewTab("Gorrila Tag Professional(WIP)")
 
 local Section3 = gtag:NewSection("Cheats")
 
@@ -36,6 +36,16 @@ Section3:NewSlider("Jump Power", "SliderInfo", 500, 0, function(s) -- 500 (MaxVa
 	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
+Section1:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section1:NewSlider("Jump Power", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
 
 
 
