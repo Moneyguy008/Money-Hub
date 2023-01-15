@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 
 local Window = Library.CreateLib("Money Hub", "DarkTheme")
 
-local studs = Window:NewTab("Easy Stud Jumps Obby")
+local studs = Window:NewTab("(PETS)🏆 Easy Stud Jumps Obby🏆")
 
 local Section1 = studs:NewSection("Cheats")
 
@@ -253,10 +253,8 @@ Section:NewButton("Fly(E)", "ButtonInfo", function()
 	coroutine.wrap(TKVUMP_fake_script)()
 end)
 
-Section1:NewButton("Tp to end", "ButtonInfo", function()
-	local char = game.Players.LocalPlayer.Character
-	local humanoidRootPart = char.HumanoidRootPart
-	humanoidRootPart.Position = Vector3.new("198.633, 1265.5, -871.71")
+Section:NewButton("Tp to end", "ButtonInfo", function()
+	game.Players.LocalPlayer.Character:MoveTo( Vector3.new(198.633, 1265.5, -871.71))
 end)
 
 
@@ -499,4 +497,14 @@ Section1:NewButton("Fly(E)", "ButtonInfo", function()
 		end)
 	end
 	coroutine.wrap(TKVUMP_fake_script)()
+end)
+
+Section1:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section1:NewSlider("JumpPower", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+	
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
