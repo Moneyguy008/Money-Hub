@@ -9,7 +9,16 @@ if mps:PlayerOwnsAsset(player, shirt) then
 
 	local Window = Library.CreateLib("Money Hub", "DarkTheme")
 
+	local rex = Window:NewTab("REx: Reincarnated(Very High WIP)")
+
+	local howmany = Window:NewTab("Guess How Many(Wip)")
+
+	local hh = howmany:NewSection("Cheats")
+
+	local xer = rex:NewSection("Cheats")
+
 	local studs = Window:NewTab("Easy Stud Jumps Obby")
+
 
 	local Section1 = studs:NewSection("Cheats")
 
@@ -301,7 +310,69 @@ if mps:PlayerOwnsAsset(player, shirt) then
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 	end)
+
+
+
+
+
+
+
+	xer:NewTextBox("Xray With Ore Finder", "TextboxInfo", function(txt)
+
+
+
+
+		local function stopScript()
+			local e = xer:NewButton("Remove HighLight", "ButtonInfo", function()
+				for e, x in pairs(game.Workspace:GetDescendants()) do
+					if x:IsA("Highlight") then
+						x:Destroy()
+						--e:Destroy()
+					end
+				end
+			end)
+			return true
+		end
+
+		while wait(.1) do
+			for i, v in pairs(game.Workspace:GetDescendants()) do
+				if v:IsA("Part") then
+					if v.Name == txt then
+						v.Transparency = 0
+						local highlight = Instance.new("Highlight", v)
+					else
+						v.Transparency = .5
+					end
+				end
+			end
+			if stopScript() then
+				return -- stop the loop
+			end
+		end
+
+
+	end)
+
+	local textof = hh:NewLabel("How Many: N/A")
+
+	hh:NewButton("Find Ammount(Just a estimate. will not be perfect)", "ButtonInfo", function()
+		local count = 0
+		for _,v in pairs(workspace.Items:GetChildren()) do
+			count = count + 1
+			textof:UpdateLabel("How Many: "..count - 50)
+			--wait(0.001)
+
+		end
+	end)
+
 else
 	player:Kick("Must Buy Shirt From Discord")
 end
+
+
+
+
+
+
+
 
