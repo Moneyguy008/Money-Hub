@@ -359,7 +359,7 @@ if mps:PlayerOwnsAsset(player, shirt) then
 		local count = 0
 		for _,v in pairs(workspace.Items:GetChildren()) do
 			count = count + 1
-			textof:UpdateLabel("How Many: "..count - 50)
+			textof:UpdateLabel("How Many: "..count - 30)
 			--wait(0.001)
 
 		end
