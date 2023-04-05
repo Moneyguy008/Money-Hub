@@ -57,7 +57,7 @@ if mps:PlayerOwnsAsset(player, shirt) then
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 	end)
 
-	Section1:NewSlider("Jump Power", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	Section1:NewSlider("Jump Power", "SliderInfo", 5000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
 		game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 	end)
