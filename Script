@@ -37,6 +37,11 @@ if mps:PlayerOwnsAsset(player, shirt) then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"))()
 
 	end)
+	
+		Section:NewButton("AimBot2", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
+
+	end)
 
 	Section:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
