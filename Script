@@ -53,7 +53,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Ai
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 	end)
 
-	Section3:NewSlider("Jump Power"https://xheptcofficial.gitbook.io/kavo-library/, "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	Section3:NewSlider("Jump Power", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
 		game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 	end)
@@ -66,23 +66,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Ai
 		game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 	end)
-	
-Section1:NewToggle("AutoFarm", "ToggleInfo", function(state)
-    if state then
-while state do
-game.Players.LocalPlayer.Character:MoveTo( Vector3.new(198.633, 1265.5, -871.71))
-wait(.5)
-game.Players.LocalPlayer.Character:MoveTo( Vector3.new(198, 1266, -987))
-<void> keypress(<uint> e)
-wait(2)
-<void> keyrelease(<uint> e)
-wait(.5)
-
-end
-    else
-        print("Toggle Off")
-    end
-end)
 
 
 
@@ -390,7 +373,6 @@ end)
 else
 	player:Kick("Must Buy Shirt From Discord")
 end
-
 
 
 
